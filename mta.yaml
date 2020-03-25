@@ -1,3 +1,19 @@
 ID: HANACAI
 _schema-version: '2.1'
-version: 0.0.1
+version: 20200324
+
+modules:
+ - name: db
+   type: hdb
+   path: db
+   requires:
+    - name: hdi_db
+
+resources:
+ - name: hdi_db
+   parameters:
+      config:
+         schema: CAI
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
