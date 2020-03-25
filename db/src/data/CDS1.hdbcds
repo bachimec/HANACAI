@@ -1,0 +1,12 @@
+namespace HANACAI.db;
+
+context CDS1 {
+    entity zchatbot {
+        key ID           : String(10);
+            COMPANY      : String(100);
+            COMPANYCODE  : String(10);
+            EMAILADDRESS : String(50);
+    } technical configuration {
+      column store; 
+};
+};
